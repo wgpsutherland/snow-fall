@@ -1,4 +1,5 @@
 snow-fall
 =========
 
-An animation with Javacsript and CSS to simulate falling particles.
+snow-fall allows you to add falling particle effects to your webpages.
+[This shows and explains everything!](http://wgpsutherland.github.io/snow-fall/)
