@@ -1,1 +1,60 @@
-<p>Hello World!</p>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>Snow Fall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./snowFall.css"/>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./snowFall.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>snow-fall <a href="https://github.com/wgpsutherland"><small>by wgpsutherland <span class="fa fa-github"></span></small></a></h1>
+
+    </div>
+
+    <div class="snow-field"></div>
+
+    <div class="container">
+        <h2>Setup:</h2>
+        <p>
+            All you need to do is include <code>snowFall.css</code>, <code>snowFall.js</code> and <code>triangle.PNG</code> in your project, and create a div with <code>class="snow-field"</code> on your webpage.
+        </p>
+        <h2>Change height and colour of div:</h2>
+        <p>
+            You may want to dive into <code>snowFall.css</code> and change the height and colour of the div.
+            The following highlighted values are the ones you will need to change:
+
+<pre>
+.snow-field {
+    background-color: <mark>rgb(40,40,40)</mark>;
+    height: <mark>500px</mark>;
+    position: relative;
+    overflow: hidden; 
+}
+...
+@-webkit-keyframes falling {
+    ...
+    100% {
+        -webkit-transform: translate(0,<mark>600px</mark>) rotateY(720deg) rotateZ(480deg);
+    }
+}
+@keyframes falling {
+    ...
+    100% {
+        transform: translate(0,<mark>600px</mark>) rotateY(720deg) rotateZ(480deg);
+    }
+}
+</pre>
+            As you can see, the pixel values in the keyframes are 100 more than the height of the div. This is to accomodate for the height of the triangle.
+        </p>
+        <br>
+    </div>
+        
+</body>

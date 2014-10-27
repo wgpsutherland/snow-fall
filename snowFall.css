@@ -1,0 +1,30 @@
+.snow-field {
+    background-color: rgb(40,40,40);
+    height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+}
+
+.particle {
+    -webkit-animation: falling 7s infinite linear;
+    animation: falling 7s infinite linear;
+}
+
+@-webkit-keyframes falling {
+    0% {
+        -webkit-transform: translate(0,0px) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: translate(0,600px) rotateY(720deg) rotateZ(480deg);
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform: translate(0,0px) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(0,600px) rotateY(720deg) rotateZ(480deg);
+    }
+}
